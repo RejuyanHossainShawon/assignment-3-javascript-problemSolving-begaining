@@ -50,21 +50,23 @@ function hotelCost(days) {
 function megaFriend(names) {
   if (names.length == 0) {
     return "The name list is empty please input correctly";
-  }
-  else if (Array.isArray(names) != true ){
-    return "This is not an array ";
-  }
+  } else if (Array.isArray(names) != true) {
+    return "This is not an array "; //checking its an array or something
+  } else{ 
+    var maximumName = names[0]; // initial maximum length name
 
-  var maximumName = names[0]; // initial value of maximum length of a name
-
-  for (var i = 0; i < names.length; i++) {
-    var name = names[i];
-    if (typeof name == typeof 1) {
-      return "There is  Number in this list verify list properly"; //checking is there any number type element in array by mistake
-    } else if (name.length > maximumName.length) {
-      maximumName = name;
+    for (var i = 0; i < names.length; i++) {
+      var name = names[i];
+      if (typeof name == typeof 1) {
+        return "There is  Number in this list verify list properly"; //checking is there any number type element in array by mistake
+      } else if (name.length > maximumName.length) {
+        maximumName = name;
+      }
     }
   }
+  
   return maximumName;
 }
- 
+var s=67;
+s = megaFriend(s);
+console.log(s);
