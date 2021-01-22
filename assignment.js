@@ -3,7 +3,7 @@ function kilometerToMeter(kilometer) {
   if (kilometer < 0) {
     return "Distance cannot be negative,Check your input value";
   } else {
-    var meter = kilometer * 1000;// 1km =1000m
+    var meter = kilometer * 1000; // 1km =1000m
     return meter;
   }
 }
@@ -52,20 +52,15 @@ function megaFriend(names) {
     return "The name list is empty please input correctly";
   }
 
-  var maximum = names[0]; // initial value of maximum length of a name
+  var maximumName = names[0]; // initial value of maximum length of a name
 
   for (var i = 0; i < names.length; i++) {
     var name = names[i];
     if (typeof name == typeof 1) {
-      return "There is  Number in this list verify list properly";//checking is there any number type element in array by mistake
-    } else if (name.length > maximum.length) {
-      maximum = name;
+      return "There is  Number in this list verify list properly"; //checking is there any number type element in array by mistake
+    } else if (name.length > maximumName.length) {
+      maximumName = name;
     }
   }
-  return maximum;
+  return maximumName;
 }
-
-
-
-
-
