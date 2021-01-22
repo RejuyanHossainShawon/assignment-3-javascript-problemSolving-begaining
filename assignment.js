@@ -52,7 +52,7 @@ function megaFriend(names) {
     return "The name list is empty please input correctly";
   } else if (Array.isArray(names) != true) {
     return "This is not an array "; //checking its an array or something
-  } else{ 
+  } else {
     var maximumName = names[0]; // initial maximum length name
 
     for (var i = 0; i < names.length; i++) {
@@ -64,9 +64,6 @@ function megaFriend(names) {
       }
     }
   }
-  
+
   return maximumName;
 }
-var s=67;
-s = megaFriend(s);
-console.log(s);
