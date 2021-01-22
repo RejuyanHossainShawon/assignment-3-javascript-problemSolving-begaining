@@ -3,7 +3,7 @@ function kilometerToMeter(kilometer) {
   if (kilometer < 0) {
     return "Distance cannot be negative,Check your input value";
   } else {
-    var meter = kilometer * 1000;
+    var meter = kilometer * 1000;// 1km =1000m
     return meter;
   }
 }
@@ -31,14 +31,14 @@ function hotelCost(days) {
     return totalCost;
   } else if (days <= 20) {
     var firstTenDays = 10 * 100;
-    var remainingDays = days - 10;//finding out which days a applicable for  first offer
+    var remainingDays = days - 10; //finding out which days a applicable for  first offer
     var secondTenDays = remainingDays * 80;
     totalCost = firstTenDays + secondTenDays;
     return totalCost;
   } else {
     var firstTenDays = 10 * 100;
     var secondTenDays = 10 * 80;
-    var remainingDays = days - 20;//finding out which days a applicable for  second offer
+    var remainingDays = days - 20; //finding out which days a applicable for  second offer
     var thirdTenDays = remainingDays * 50;
     totalCost = firstTenDays + secondTenDays + thirdTenDays;
     return totalCost;
@@ -56,17 +56,16 @@ function megaFriend(names) {
 
   for (var i = 0; i < names.length; i++) {
     var name = names[i];
-    if(typeof(name) == typeof(1))
-    {
-      return "There is a Number in this list verify list properly";
-    }
-   else if (name.length > maximum.length) {
+    if (typeof name == typeof 1) {
+      return "There is  Number in this list verify list properly";//checking is there any number type element in array by mistake
+    } else if (name.length > maximum.length) {
       maximum = name;
     }
   }
   return maximum;
 }
-var names=["aksh","shawon","fshfih","ihfih","ngfhoesgo","fnfog",78]
-var res = megaFriend(names);
-console.log(res);
+
+
+
+
 
